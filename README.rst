@@ -55,6 +55,9 @@ Activate virtual environment and run the following command to start
 
 There is a drop down menu where you can select the input source as shown in the image above.
 
-For Mac users, the default input is usually microphone only, for getting input from the music directly
-you may need to install soundflower https://rogueamoeba.com/freebies/soundflower/ and create an aggregated device so
-that your output goes to both your stereo and the visual loop machine.
+For Mac users, the default input is usually the built-in microphone, if you would like to route the music output to v_machine directly, you will need to install a virtual output/input device:
+
+- For Mac with Intel processor, you can install soundflower https://github.com/mattingalls/Soundflower
+- For Mac with Apple Silicon, you can install https://github.com/ExistentialAudio/BlackHole
+
+After installation, you can use the built-in Audio MIDI Setup to create a Multi-Output device and check both the virtual device and the speaker, then set this Multi-Output device as the system audio output, then in v_machine select to use the virtual device as audio input source
